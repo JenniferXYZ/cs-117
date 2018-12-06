@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <title>360 Gallery</title>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component@3.x.x/dist/aframe-layout-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.x.x/dist/aframe-event-set-component.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Mono" media="all" /></head>
+
+  <body class="a-body ">
+     
+    <a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui=""><canvas class="a-canvas" data-aframe-canvas="true" width="750" height="375"></canvas>
+  <a-assets>
+    <audio id="click-sound" src="audio/click.ogg"></audio>
+
+    <!-- Images. -->
+    
+    
+    
+    
+    
+    
+  <img id="city" src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2Farchitecture-background-buildings-218983.jpg?1544087688043" crossorigin="anonymous"><img id="city-thumb" src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2FiStock-494340666-Barcelona-beach.jpg?1544087709714" crossorigin="anonymous"><img id="cubes" src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2Frome.jpg?1544087710328" crossorigin="anonymous"><img id="cubes-thumb" src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2FDublin.png?1544087712003" crossorigin="anonymous"><img id="sechelt" src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2Fshutterstock_278852369.jpg?1544087711833" crossorigin="anonymous"><img id="sechelt-thumb" src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2FiStock-624020314-Paris.jpg?1544087708774" crossorigin="anonymous"></a-assets>
+
+  <!-- 360-degree image. -->
+  <a-sky id="image-360" radius="10" src="#city" material="" geometry=""></a-sky>
+
+      
+      <a-image src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2Frome.jpg?1544087710328" position="7.085136196953913 0 -1.5688177611798912" rotation="0 -90 0" scale="0.6 0.6 0.6" material="" geometry=""></a-image>
+      <a-image src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2FiStock-494340666-Barcelona-beach.jpg?1544087709714" position="4.604283496092878 0 -6.180950053754137" rotation="0 -45 0" scale="0.6 0.6 0.6" material="" geometry=""></a-image>
+         <a-image src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2Frome.jpg?1544087710328" position="-5.46952646072905 0 -5.918738175496053" rotation="0 45 0" scale="0.6 0.6 0.6" material="" geometry=""></a-image>
+         <a-image src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2FDublin.png?1544087712003" position="-7.494512435113759 0 0" rotation="0 90 0" scale="0.6 0.6 0.6" material="" geometry=""></a-image>
+         <a-image src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2Fshutterstock_278852369.jpg?1544087711833" position="-0.9492070276625548 0.08695578555409433 -7.822771092874982" scale="0.6 0.6 1" material="" geometry=""></a-image>
+      <a-image src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2Fimages%20(1).jpg?1544089220294" position="-0.5742175955422528 0 7.218169014117359" scale="0.6 0.6 1" material="" geometry=""></a-image>
+      <a-image src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2Fimages.jpg?1544089220376" position="4.427305878943419 0 5.437260971589142" scale="0.6 0.6 0.6" material="" geometry=""></a-image>
+      <a-image src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2Fdubai-water-discus-2-e1375987038363.jpg?1544089220596" position="5.854598625365585 0 4.148868416966559" rotation="0 -135 0" scale="0.6 0.6 1" material="" geometry=""></a-image>
+      <a-image src="https://cdn.glitch.com/15d52326-f0fd-4191-a324-bd1b161e1d5b%2F1511252360_Wild_Wadi_Waterpark_-_Panoramic_View_Night_Shot.jpg.jpg?1544089220647" position="-6.055387631011857 0.2134283848646561 4.158761187376754" rotation="0 135 0" scale="0.6 0.6 1" material="" geometry=""></a-image>
+      
+  <!-- Link we will build. -->
+  <a-entity class="link"></a-entity>
+
+  <!-- Camera + Cursor. -->
+  <a-camera rotation="-15.584452027558394 98.31955764444929 0" camera="" look-controls="" wasd-controls="" data-aframe-inspector-original-camera="">
+    <a-cursor id="cursor" material="" raycaster="" cursor="" geometry="">
+      <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+      <a-animation begin="cursor-fusing" easing="ease-in" attribute="scale" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+    </a-cursor>
+  </a-camera>
+</a-scene>
+    
+    <a-entity class="link" geometry="primitive: plane; height: 5; width: 5" material="shader: flat; src: #cubes-thumb" sound="on: click; src: #click-sound" position="" rotation="" scale="" visible=""></a-entity>
+    
+    
+    
+    
+
+  
+
+</body></html>
